@@ -4,6 +4,8 @@ $(document).ready(function() {
 
 function changePageAndSize() {
     $('#pageSizeSelect').change(function(evt) {
-        window.location.replace("/user/?pageSize=" + this.value + "&page=1");
+        var pathname = window.location.pathname;
+
+        window.location.replace(pathname + "?pageSize=" + this.value + "&page=1");
     });
 }
